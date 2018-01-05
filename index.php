@@ -32,7 +32,10 @@ error_reporting(0);
 			<!-- post -->
 			<?php 
 			$PostPerPage=4;
-			$Page=$_GET['p'];
+			$Page=1;
+			if ($_GET['p']) {
+				$Page=$_GET['p'];
+			}
 			$result=GetPostsPagination($Page-1,$PostPerPage);
 			// $result=GetPosts();	
 			//print_r($result->fetch_assoc());				
